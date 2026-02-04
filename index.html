@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crazy Gaming Hub – Play Free Online Games</title>
+<meta name="description" content="Play free online games instantly. No downloads, no signup.">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:20px;
+  font-size:32px;
+  background:#020617;
+}
+
+/* Game grid */
+.game-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+/* Game card */
+.game-card{
+  background:#020617;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 0 20px rgba(0,255,204,0.3);
+}
+
+/* Image preview */
+.game-preview{
+  position:relative;
+}
+.game-preview img{
+  width:100%;
+  display:block;
+}
+
+/* Playable badge */
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#00ffcc;
+  color:black;
+  padding:5px 10px;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+/* Title */
+.game-card h2{
+  text-align:center;
+  margin:10px 0;
+  color:#ffcc00;
+}
+
+/* Play button */
+.play-btn{
+  display:block;
+  margin:10px auto;
+  padding:10px 20px;
+  background:#00ffcc;
+  color:black;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+  width:fit-content;
+}
+.play-btn:hover{
+  background:#ffcc00;
+}
+
+/* Iframe */
+iframe{
+  width:100%;
+  height:400px;
+  border:none;
+  display:none;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>🎮 Crazy Gaming Hub 🎮</header>
+
+<div class="game-grid">
+
+<!-- GAME 1 -->
+<div class="game-card">
+
+  <div class="game-preview">
+    <span class="badge">Playable</span>
+    <img src="/images/crazy-tunnel-1.jpg" alt="Crazy Tunnel Game">
+  </div>
+
+  <h2>Crazy Tunnel</h2>
+
+  <div class="play-btn"
+       onclick="this.style.display='none';
+                this.nextElementSibling.style.display='block';
+                this.nextElementSibling.src=this.nextElementSibling.dataset.src;">
+    ▶ Play Game
+  </div>
+
+  <iframe
+    data-src="https://html5.gamedistribution.com/dd2ab5adad664c508d3fa032bd19e8c8/"
+    loading="lazy">
+  </iframe>
+
+</div>
+
+</div>
+
+<footer>
+  © 2026 Crazy Gaming Hub
+</footer>
+
+</body>
+</html>
